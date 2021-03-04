@@ -8,9 +8,9 @@
 ##########################################################################
 file=$1
 user='dstadmin'
-pass='Cloud@2018'
-#hostname="w3-969.ibm.com"
-#hostname2="sl.bluecloud.ibm.com"
+pass=''
+#hostname=""
+#hostname2=""
 LISTSER=$2
 j=0
 for i in `cat $LISTSER`
