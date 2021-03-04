@@ -40,7 +40,7 @@ connectssh(){
 	echo "server: $server $password"
 	echo "server: $server $password">>servers_log.txt
 
-        connectDstadmin=$(ssh -T -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=25 ${userDstadmin}@${server}.w3-969.ibm.com "SSH_CONNECTED_TOKEN" 2>&1)
+        connectDstadmin=$(ssh -T -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=25 ${userDstadmin}@${server} "SSH_CONNECTED_TOKEN" 2>&1)
         echo $connectDstadmin
         isConnected=$(echo ${connectDstadmin} | grep -c "SSH_CONNECTED_TOKEN")
         isError=$(echo ${connectDstadmin} | grep -c "Permission denied")
@@ -51,7 +51,7 @@ connectssh(){
         elif [[  "${isError}" -gt 1  ]]
         then
 		echo "no connected try with different user"
-            connectCioadmin=$(sshpass -p $password ssh -o ConnectTimeout=25 ${userCioadmin}@${server}.w3-969.ibm.com "SSH_CONNECTED_TOKEN" 2>&1) 
+            connectCioadmin=$(sshpass -p $password ssh -o ConnectTimeout=25 ${userCioadmin}@${server} "SSH_CONNECTED_TOKEN" 2>&1) 
             isConnected=$(echo ${connectCioadmin} | grep -c "SSH_CONNECTED_TOKEN")
             isError=$(echo ${connectCioadmin} | grep -c "Permission denied")
             if [[ "${isConnected}" -gt 0 ]]
