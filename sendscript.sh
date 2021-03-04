@@ -19,9 +19,9 @@ SCRIPT=$1
 DATE=$(date +%m%d%y-%H-%M-%S)
 errorLog=$DATE-error.log
 generalLog=$DATE-general.log
-password="Cloud@2018"
-hostname="sl.bluecloud.ibm.com"
-hostname2="w3-969.ibm.com"
+password=""
+hostname=""
+hostname2=""
 for srvr in `cat $LISTSER`
  do
 	count=$((count+1))
