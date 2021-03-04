@@ -12,7 +12,7 @@ user="cioadmin"
 for i in $(cat $file)
 do
 #host=$('hostname')
-scp /home/malaniz/Documentos/data/GIT/preworkPatching.sh $user@$i.w3-969.ibm.com:/tmp/ 
+scp /home/malaniz/Documentos/data/GIT/preworkPatching.sh $user@$i:/tmp/ 
 #scp $user@$i:/tmp/$i"_"log.txt /home/miguel/Documents/data/Vulnes .
 echo "please check if the file its download"
 done
