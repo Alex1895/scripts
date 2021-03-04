@@ -1,6 +1,6 @@
 #!/bin/bash
 # Overview:	Script for send and execute a script from your local machine to a server list
-# Author:	Malchiel Rodriguez 	malchiel.rodriguez@ibm.com
+# Author:	Malchiel Rodriguez 	
 # Date:		Tue Apr 16 18:54:58 CDT 2019
 # Usage:	./script-multi-csv.sh <script> <server-list>
 # Example:	./script-multi-csv.sh ibm-script.sh servers-list.txt
